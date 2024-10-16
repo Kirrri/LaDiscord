@@ -36,7 +36,8 @@ def main():
     global stream  # Определяем глобальную переменную
     client = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
     try:
-        client.connect(('в....те сюда свой локальный ip сервака', 12345))  # Замените на IP адрес вашего сервера
+        ip = str(input("Введите ip сервака: "))
+        client.connect((ip, 55055))  # Замените на IP адрес вашего сервера
 
         channel_name = input("Введите имя аудио канала: ")
         password = input("Введите пароль для канала: ")

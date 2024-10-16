@@ -47,9 +47,9 @@ def handle_client(client_socket):
 
 def start_server():
     server = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-    server.bind(('0.0.0.0', 12345))  # 0.0.0.0 для внешнего доступа
+    server.bind(('0.0.0.0', 55055))  # 0.0.0.0 для внешнего доступа
     server.listen(5)
-    print("Сервер запущен и слушает на порту 12345...")
+    print("Сервер запущен и слушает на порту 55055. Этот порт должен быть свободен.")
 
     while True:
         client_socket, addr = server.accept()
